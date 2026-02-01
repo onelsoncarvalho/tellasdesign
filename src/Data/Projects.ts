@@ -9,7 +9,7 @@ import popCloneImage from '../assets/projects_images/pop-clone.webp';
 import selfcareImage from '../assets/projects_images/selfcare.webp';
 
 const Projects = {
-  title: 'Confira meus Projetos',
+  title: 'Veja meus sites',
   projects: [
     {
       title: 'Doceria',
@@ -140,7 +140,7 @@ const Projects = {
       alt: 'Landing Page do AmazonasDataHub',
       buttons: [
         {
-          url: 'https://nelson-devstack.github.io/amazonasdatahubsite',
+          url: 'https://onelsoncarvalho.github.io/amazonasdatahubsite',
         },
       ],
     },

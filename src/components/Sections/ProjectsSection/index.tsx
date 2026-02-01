@@ -24,21 +24,20 @@ const ProjectsSection = () => {
       className={`
       relative
       z-20
-      min-h-screen py-32
-      bg-[#212121]
-
+      min-h-screen
+      py-8
+      lg:py-32
+      bg-slate-100
       bg-no-repeat
       bg-cover
-      
-      bg-[url('/grainy_dark.jpg')]
     `}
     >
-      <SubHeading className="text-2xl text-center mb-5 text-white">
+      <SubHeading className="text-2xl text-center mb-5 text-black">
         {Projects.title}
       </SubHeading>
 
       <Container>
-        <p className="text-white text-base text-center mb-4">
+        <p className="text-black text-base text-center mb-4">
           Arraste pro lado
         </p>
 
@@ -46,10 +45,10 @@ const ProjectsSection = () => {
           <div className="flex overflow-x-scroll no-scrollbar gap-5 md:hidden snap-mandatory snap-x">
             {Projects.projects.map((project) => (
               <div
-                className="flex justify-center snap-center"
+                className="flex justify-center snap-center drop-shadow-lg"
                 key={project.title}
               >
-                <div className="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg w-[calc(230px_+_10vh)]">
+                <div className="flex flex-col bg-[#fafafa] md:flex-row md:max-w-xl rounded-lg w-[calc(230px_+_10vh)]">
                   <Image
                     className="w-full h-48 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
                     src={project.image}
@@ -76,18 +75,6 @@ const ProjectsSection = () => {
                         <TbClick />
                         Visitar
                       </a>
-
-                      {project.buttons[1] ? (
-                        <a
-                          href={project.buttons[1].url}
-                          className={darkBtnStyle}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <AiFillGithub />
-                          Código-Fonte
-                        </a>
-                      ) : null}
                     </div>
                   </div>
                 </div>
@@ -145,17 +132,7 @@ const ProjectsSection = () => {
                       Visitar
                     </a>
 
-                    {project.buttons[1] ? (
-                      <a
-                        href={project.buttons[1].url}
-                        className={darkBtnStyle}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <AiFillGithub />
-                        Código-Fonte
-                      </a>
-                    ) : null}
+                    
                   </div>
                 </div>
               </SplideSlide>

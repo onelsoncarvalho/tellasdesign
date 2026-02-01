@@ -10,7 +10,7 @@ const Navbar = () => {
   // const router = useRouter();
   const { links } = NavbarData;
   const [showNavbar, setShowNavbar] = useState(false);
-  const activeLinkStyle = '!text-accentGreen';
+  const activeLinkStyle = '!text-[#4249EC]';
 
   /* Function to Handle Scroll and change State */
   // if (typeof window !== 'undefined') {
@@ -23,11 +23,11 @@ const Navbar = () => {
   // }
 
   return (
-    <nav className="px-2 sm:px-4 py-2.5 bg-mainDark fixed w-full z-20 top-0 left-0 z-50 shadow-xl">
+    <nav className="px-2 sm:px-4 py-2.5 bg-slate-100 fixed w-full z-20 top-0 left-0 z-50 shadow-xl">
       <div className="container flex flex-wrap items-center justify-between mx-auto px-4 md:px-8">
         <Link href="/" className="col-span-1">
           <img
-            src={'/codeIcon.png'}
+            src={'/Logo_Tellas_Design_Digital.png'}
             alt="Logo"
             width={35}
             height={35}
@@ -62,7 +62,7 @@ const Navbar = () => {
           id="navbar-sticky"
         >
           <ul
-            className={`flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-mainDark absolute transition transition-translate duration-500 h-screen md:h-auto top-[43px] md:top-0 md:static left-0 w-full pl-5 pt-10 md:pt-4 md:w-auto md:translate-x-0 gap-5 md:gap-0 md:ml-5 ${
+            className={`flex flex-col p-4 mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 bg-slate-100 absolute transition transition-translate duration-500 h-screen md:h-auto top-[43px] md:top-0 md:static left-0 w-full pl-5 pt-10 md:pt-4 md:w-auto md:translate-x-0 gap-5 md:gap-0 md:ml-5 ${
               showNavbar
                 ? 'translate-x-0 md:w-auto'
                 : '-translate-x-[1000px] transition duration-500'
@@ -76,7 +76,7 @@ const Navbar = () => {
                   spy={true}
                   offset={link.offset}
                   duration={500}
-                  className="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 cursor-pointer text-slate-50 tracking-wider font-text text-lg md:text-sm"
+                  className="block py-2 pl-3 pr-4 text-slate-900 rounded md:bg-transparent md:p-0 cursor-pointer text-slate-50 tracking-wider font-text text-lg md:text-sm"
                   onClick={() => setShowNavbar(false)}
                   activeClass={activeLinkStyle}
                 >

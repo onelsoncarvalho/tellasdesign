@@ -1,6 +1,6 @@
 import { StaticImageData } from 'next/image';
 
-import mainLogo from '../assets/codeIcon.png';
+import mainLogo from '../assets/Logo_Tellas_Design_Digital.png';
 
 type NavbarLink = {
   id: number | string;
@@ -18,7 +18,7 @@ type NavbarData = {
 
 const NavbarData: NavbarData = {
   brandLogo: mainLogo,
-  brandName: 'Nelson Carvalho',
+  brandName: 'Tellas Design Digital',
   links: [
     {
       id: 0,
@@ -28,22 +28,22 @@ const NavbarData: NavbarData = {
     },
     {
       id: 1,
-      label: 'Projetos',
-      to: 'projetos',
-      offset: 0,
-    },
-    {
-      id: 2,
       label: 'Diferencial',
       to: 'diferencial',
       offset: 0,
     },
     {
-      id: 3,
-      label: 'Sobre',
-      to: 'sobre',
+      id: 2,
+      label: 'Projetos',
+      to: 'projetos',
       offset: 0,
     },
+    // {
+    //   id: 3,
+    //   label: 'Sobre',
+    //   to: 'sobre',
+    //   offset: 0,
+    // },
     // {
     //   id: 4,
     //   label: 'Contato',

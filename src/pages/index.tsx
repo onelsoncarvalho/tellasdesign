@@ -9,6 +9,7 @@ import ContactSection from '../components/Sections/ContactSection';
 import DifferentialSection from '../components/Sections/DifferentialSection';
 import HeroSection from '../components/Sections/HeroSection';
 import ProjectsSection from '../components/Sections/ProjectsSection';
+import MarketingSection from '../components/Sections/MarketingSection';
 import AboutData from '../Data/About';
 
 // Main Page
@@ -20,9 +21,10 @@ const Home: NextPage = () => {
 
       <main className="#overflow-x-hidden">
         <HeroSection />
-        <ProjectsSection />
         <DifferentialSection />
-        <AboutSection {...AboutData} />
+        <MarketingSection />
+        <ProjectsSection />
+        {/*<AboutSection {...AboutData} />*/}
         <ContactSection />
         <Footer />
       </main>

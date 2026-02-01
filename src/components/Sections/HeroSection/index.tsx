@@ -7,6 +7,7 @@ import { Link } from 'react-scroll';
 import greenShadow from '../../../assets/green_vector.svg';
 import iphoneSite from '../../../assets/iphone_site.png';
 import macbookSite from '../../../assets/macbook_site.png';
+import mockups from '../../../assets/mockups.png';
 import HeroData from '../../../Data/Hero';
 import { HeroDataType } from '../../../types/HeroData';
 /* Data */
@@ -42,15 +43,16 @@ const HeroSection = () => {
   };
 
   /* Styles */
-  const heroBackgroundStyle = `bg-slate-100 h-full bg-no-repeat bg-cover pt-24 flex items-center z-10`;
+  const heroBackgroundStyle = `bg-slate-100 h-full bg-no-repeat bg-cover py-20 lg:py-28 flex items-center z-10`;
   const heroContainerStyle = `backgrop-blur-lg flex flex-col lg:grid lg:grid-cols-2 lg:items-center`;
-
+  
   return (
     <section className="h-full flex flex-col relative " id="home">
       <div className={heroBackgroundStyle}>
-        <Container className={heroContainerStyle}>
+        <Container>
           {/* Hero Content */}
-          <div className="max-w-md lg:max-w-2xl">
+          <div className={`bg-[#4249EC] rounded-3xl py-10 px-4 md:px-16 w-full ${heroContainerStyle}`}>
+          <div className="lg:max-w-2xl">
             <motion.div
               variants={titleMotion}
               initial="hidden"
@@ -59,9 +61,8 @@ const HeroSection = () => {
                 duration: 0.6,
               }}
             >
-              <Heading>
-                Nelson Carvalho, Web Designer e{' '}
-                <span className="text-accentPurple">Desenvolvedor Web.</span>
+              <Heading className="!text-white font-extrabold">
+                TELLAS | Design Digital{' '}
               </Heading>
             </motion.div>
 
@@ -72,22 +73,21 @@ const HeroSection = () => {
               transition={{
                 duration: 0.6,
               }}
-              className="text-[1.125rem] lg:text-[1.25rem] text-[#6d748f] font-medium leading-tight font-main max-w-lg mt-5"
+              className="text-[1.125rem] lg:text-[1.25rem] text-[#fafafa] font-medium leading-tight font-main  mt-5"
             >
-              Com um bom design e um bom site, te ajudo a destacar seus produtos
-              e aumentar seu público no mercado. Confira meu Portfólio.
+              Suas soluções de design e sites estão bem aqui! Com um design moderno e sites rápidos, te ajudo a destacar seus produtos e conquistar mais clientes.
             </motion.h2>
 
-            <div className="mt-5 max-w-fit flex">
+            <div className="mt-5 max-w-full flex text-center">
               <Link
-                to="projetos"
+                to="contato"
                 smooth={true}
                 spy={true}
                 offset={0}
                 duration={500}
-                className="border border-accentGreen bg-accentGreen p-3 px-6 flex rounded-full font-text shadow-md shadow-green-600 cursor-pointer transition duration-500 hover:scale-110 hover:shadow-lg hover:shadow-green-500 font-medium"
+                className="border border-accentGreen bg-accentGreen p-3 px-6 flex rounded-lg font-text shadow-md shadow-green-600 cursor-pointer transition duration-500 hover:scale-110 hover:shadow-lg hover:shadow-green-500 font-medium w-full justify-center"
               >
-                Conhecer
+                QUERO CONTRATAR E ALAVANCAR MINHAS VENDAS!
               </Link>
             </div>
           </div>
@@ -105,32 +105,34 @@ const HeroSection = () => {
             transition={{
               duration: 0.7,
             }}
-            className="relative w-full h-full py-[12vh] 2xl:py-[18vh]"
+            className="relative w-full h-full"
           >
-            <Image
-              src={greenShadow}
-              alt={'Efeito'}
-              className="absolute -z-10 top-10 opacity-90"
-              priority={true}
-              loading="eager"
-            />
-            <div className="flex  justify-center relative">
+          <div className="flex justify-center relative">
+              <Image
+                src={mockups}
+                alt={"Mockups de sites"}
+                className="scale-105 lg:scale-125"
+              />
+              {/*
               <Image
                 src={macbookSite}
                 alt={'Site em Notebook'}
-                className="max-w-sm lg:max-w-[520px] w-full h-full remright-20 md:right-[5vw] xl:right-[4.5vw] relative"
+                className="max-w-sm lg:max-w-[800px] w-full h-full remright-20 xl:right-[0vw] relative"
               />
               <Image
                 src={iphoneSite}
                 alt={'Site em Smartphones/Celulares'}
-                className="max-w-[100px] md:max-w-[130px] md:right-[10vh] lg:max-w-[180px] absolute -bottom-12 remright-28 md:right-[7vw] xl:right-[6.8vw] 2xl:right-[8vw]"
+                className="max-w-[100px] md:max-w-[100px] lg:max-w-[200px] absolute -bottom-12 remright-28 xl:right-[3.8vw] 2xl:right-[2vw]"
               />
+              */}
             </div>
           </motion.div>
+        </div>
         </Container>
       </div>
 
       {/* Certificates Area */}
+      {/*
       <div className="bg-white flex-1 shadow-md border-b border-gray-200 flex items-center bg-slate-50 border-t border-gray-200 z-10">
         <Container className="md:flex items-center gap-20 h-full py-2">
           <Text className="mt-2 lg:mt-0">Certificado por</Text>
@@ -146,7 +148,7 @@ const HeroSection = () => {
             ))}
           </div>
         </Container>
-      </div>
+      </div>*/}
     </section>
   );
 };

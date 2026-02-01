@@ -53,12 +53,13 @@ const HeadComponent = ({ title }: HeadProps) => {
         href="/favicons/favicon-16x16.png"
       />
       <link rel="manifest" href="/favicons/site.webmanifest" />
+      {/*
       <link
         rel="mask-icon"
         href="/favicons/safari-pinned-tab.svg"
         color="#212121"
-      />
-      <link rel="shortcut icon" href="/src/assets/favicons/favicon.ico" />
+      />*/}
+      <link rel="shortcut icon" href="/favicons/favicon.ico" />
       <meta name="msapplication-TileColor" content="#212121" />
       <meta name="msapplication-config" content="/favicons/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
@@ -67,7 +68,7 @@ const HeadComponent = ({ title }: HeadProps) => {
 };
 
 HeadComponent.defaultProps = {
-  title: 'Nelson Carvalho | Desenvolvedor Web',
+  title: 'Tellas Design Digital',
 };
 
 export default HeadComponent;

@@ -2,7 +2,6 @@ import { motion, Variants } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
 import { Link } from 'react-scroll';
-import { FaInstagram } from 'react-icons/fa';
 
 /* Assets */
 import greenShadow from '../../../assets/green_vector.svg';
@@ -10,8 +9,6 @@ import iphoneSite from '../../../assets/iphone_site.png';
 import macbookSite from '../../../assets/macbook_site.png';
 import mockups from '../../../assets/mockups.png';
 import grid from '../../../assets/Grid.png';
-import contactImage from '../../../assets/contact_image.png';
-import gmailIcon from '../../../assets/gmail-icon.svg';
 import HeroData from '../../../Data/Hero';
 import { HeroDataType } from '../../../types/HeroData';
 /* Data */
@@ -21,9 +18,6 @@ import Heading from '../../UI/Heading';
 import Text from '../../UI/Text';
 
 const ContactSection = () => {
-  const labelStyle = `my-2 flex flex-col text-white font-text text-lg`;
-  const inputStyle = `rounded-sm text-gray-900 px-1 py-2`;
-  
   // Data
   const { certificates }: HeroDataType = HeroData;
 
@@ -54,12 +48,12 @@ const ContactSection = () => {
   const heroContainerStyle = `backgrop-blur-lg flex flex-col lg:grid lg:grid-cols-2 lg:items-center`;
   
   return (
-    <section className="h-full flex flex-col relative " id="contato">
+    <section className="h-full flex flex-col relative " id="home">
       <div className={heroBackgroundStyle}>
         <Container>
           {/* Hero Content */}
-          <div className={`bg-[#212121] rounded-3xl py-8 px-4 md:px-16 w-full gap-16 ${heroContainerStyle}`}>
-          <div className="lg:max-w-2xl py-5">
+          <div className={`bg-[#212121] rounded-3xl py-0 px-4 md:px-16 w-full ${heroContainerStyle}`}>
+          <div className="lg:max-w-2xl">
             <motion.div
               variants={titleMotion}
               initial="hidden"
@@ -82,87 +76,21 @@ const ContactSection = () => {
               }}
               className="text-[1.125rem] lg:text-[1.25rem] text-[#fafafa] font-medium leading-tight font-main  mt-5"
             >
-              Entre em contato para impulsionar seus negócios, vendas e empreendimentos.
+              Com as tecnologias certas, nós fazemos seu site funcionar em todas as telas, desde celulares pequenos até grandes monitores.
             </motion.h2>
 
-            <form
-              className="flex flex-col max-w-xs mx-auto lg:max-w-none"
-              action={`https://formsubmit.co/nelsoncarvalho.negocios@gmail.com`}
-              method="POST"
-            >
-            <label className={labelStyle} htmlFor="name">
-              Seu nome
-              <input
-                type="text"
-                className={inputStyle}
-                id="name"
-                name="name"
-                required={true}
-                placeholder="Digite seu nome"
-              />
-            </label>
-            <label className={labelStyle} htmlFor="email">
-              Seu e-mail
-              <input
-                type="email"
-                className={inputStyle}
-                id="email"
-                name="email"
-                required={true}
-                placeholder="Digite seu e-mail"
-              />
-            </label>
-            <label className={labelStyle} htmlFor="message">
-              Sua Mensagem
-              <textarea
-                className={inputStyle}
-                rows={5}
-                id="message"
-                name="message"
-                required={true}
-                placeholder="Digite sua mensagem"
-              />
-            </label>
-
-            {/* <input type="hidden" name="_next" value={`${process.env.NEXT_PUBLIC_ENV !== 'production' ?}`} /> */}
-            <input
-              type="hidden"
-              name="_next"
-              value={
-                process.env.NEXT_PUBLIC_ENV !== 'production'
-                  ? 'http://localhost:3000/agradecimento'
-                  : `${process.env.NEXT_PUBLIC_URL}/agradecimento`
-              }
-            />
-
-            <input type="hidden" name="_captcha" value="false" />
-
-            <button
-              type="submit"
-              className="border border-accentGreen bg-accentGreen p-3 px-6 flex rounded-lg font-text shadow-md shadow-green-600 cursor-pointer transition duration-500 hover:scale-110 hover:shadow-lg hover:shadow-green-500 font-medium w-full justify-center"
-            >
-              Enviar
-            </button>
-            
-            </form>
-
-          <div className="flex flex-col items-center mt-10">
-            <p className="text-white font-text">Ou se preferir:</p>
-
-            <div>
-              <a
-                target="_blank"
-                rel="noreferrer"
-                className="p-2 bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] transition duration-500 text-white rounded-md flex items-center gap-2 w-full hover:scale-105 my-4 font-medium"
-                href="https://instagram.com/tellas.design"
+            <div className="mt-5 max-w-full flex bg-red-900 text-center">
+              <Link
+                to="projetos"
+                smooth={true}
+                spy={true}
+                offset={0}
+                duration={500}
+                className="border border-accentGreen bg-accentGreen p-3 px-6 flex rounded-lg font-text shadow-md shadow-green-600 cursor-pointer transition duration-500 hover:scale-110 hover:shadow-lg hover:shadow-green-500 font-medium w-full justify-center"
               >
-                <FaInstagram fontSize={25} />
-                tellas.design
-              </a>
+                QUERO CONTRATAR E ALAVANCAR MINHAS VENDAS!
+              </Link>
             </div>
-          </div>
-
-          
           </div>
 
           {/* Hero Image */}
@@ -180,10 +108,10 @@ const ContactSection = () => {
             }}
             className="relative w-full h-full"
           >
-          <div className="flex justify-center relative bg-slate-100 rounded-xl">
+          <div className="flex justify-center relative absolute left-16">
               <Image
-                src={contactImage}
-                alt={"Imagem Ilustrativa de contato"}
+                src={grid}
+                alt={"Grid"}
                 className=""
               />
               {/*

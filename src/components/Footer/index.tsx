@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 
-import logo from '../../assets/codeIcon.png';
+import logo from '../../assets/Logo_Tellas_Design_Digital.png';
 import Container from '../UI/Container';
 import Text from '../UI/Text';
 
@@ -15,10 +15,10 @@ const Footer = () => {
         <div className="font-heading text-white flex items-center gap-4 text-xl font-medium tracking-wide">
           <Image
             src={logo}
-            alt="Nelson Carvalho - Logo"
+            alt="Tellas Design Digital - Logo"
             className="max-h-[40px] w-auto"
           />
-          Nelson Carvalho
+          Tellas | Design Digital
         </div>
 
         <div className="mt-8 flex flex-col lg:flex-row lg:gap-28">
@@ -30,18 +30,13 @@ const Footer = () => {
               </a>
             </li>
             <li className={listItemStyle}>
-              <a className={linkStyle} href="#projetos">
-                Projetos
-              </a>
-            </li>
-            <li className={listItemStyle}>
               <a className={linkStyle} href="#diferencial">
                 Diferencial
               </a>
             </li>
             <li className={listItemStyle}>
-              <a className={linkStyle} href="#sobre">
-                Sobre
+              <a className={linkStyle} href="#projetos">
+                Projetos
               </a>
             </li>
             <li className={listItemStyle}>
@@ -70,7 +65,7 @@ const Footer = () => {
           </ul> */}
         </div>
         <Text className="text-[#e1e1e1] mt-10 text-base text-center mx-auto !text-base">
-          Desenvolvido por Nelson Carvalho - 2022
+          Desenvolvido por Tellas Design Digital - 2026
         </Text>
       </Container>
     </footer>

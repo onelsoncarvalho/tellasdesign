@@ -4,6 +4,14 @@ import React from 'react';
 
 import checkIcon from '../../../assets/CheckIcon.svg';
 import mockupView from '../../../assets/mockups/mockup_view4.png';
+import grid from '../../../assets/Grid.png';
+import computador from '../../../assets/computador.png';
+import quadro from '../../../assets/quadro.png';
+import coroa from '../../../assets/coroa.png';
+import celular from '../../../assets/celular.png';
+import raio from '../../../assets/raio.png';
+
+
 import DifferentialsData from '../../../Data/Differentials';
 import Showcase from '../../Showcase';
 import Container from '../../UI/Container';
@@ -23,68 +31,61 @@ const DifferentialSection = () => {
   return (
     <>
       <section
-        className="relative md:pt-56 py-20 overflow-hidden bg-slate-100 z-10"
+        className="relative py-8 lg:py-20 overflow-hidden bg-slate-100 z-10"
         id="diferencial"
       >
-        <Container className="mb-28">
-          <div className="grid md:grid-cols-2">
-            <div>
-              <div className="max-w-md">
-                <SubHeading className="text-gray-800">{title}</SubHeading>
-                <Text className="mt-4 text-[#313131]">{text}</Text>
+        <Container className="">
+          <div>
+            <SubHeading className="!text-5xl text-center mb-20">Diferencial</SubHeading>
+            <div className="flex justify-between flex-col items-center md:flex-row gap-8">
+              <div className="flex flex-col justify-center align-center text-center max-w-[300px]">
+                <Image
+                    src={computador}
+                    className="max-w-[200px] mx-auto"
+                  />
+                <h2 className="font-bold text-xl">Sites modernos</h2>
+
               </div>
 
-              <ul className="flex flex-col gap-4 mt-10">
-                {items.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-center text-lg gap-1 text-gray-800 font-medium"
-                  >
-                    <Image
-                      src={checkIcon}
-                      alt="Ícone de Lista"
-                      className="max-w-[30px]"
-                    />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            
+              <div className="flex flex-col justify-center align-center text-center max-w-[300px]">
+                <Image
+                    src={quadro}
+                    className="max-w-[200px] mx-auto"
+                  />
+                <h2 className="font-bold text-xl">Tecnologias atuais</h2>
+              </div>
 
-            <div>
-              <Image
-                src={mockupView}
-                alt="Apresentações de alguns dos meus sites"
-                className={mockupStyle}
-              />
+            
+             <div className="flex flex-col justify-center align-center text-center max-w-[300px]">
+                <Image
+                    src={coroa}
+                    className="max-w-[200px] mx-auto"
+                  />
+                <h2 className="font-bold text-xl">Designs elegantes</h2>
+              </div>
+
+            
+              <div className="flex flex-col justify-center align-center text-center max-w-[300px]">
+                <Image
+                    src={celular}
+                    className="max-w-[200px] mx-auto"
+                  />
+                <h2 className="font-bold text-xl">Sites responsivos</h2>
+              </div>
+
+            
+              <div className="flex flex-col justify-center align-center text-center max-w-[300px]">
+                <Image
+                    src={raio}
+                    className="max-w-[200px] mx-auto"
+                  />
+                <h2 className="font-bold text-xl">Sites rápidos</h2>
+              </div>
+              
             </div>
           </div>
         </Container>
-
-        <div className={`bg-slate-100 py-2 sticky ${showcaseBoxShadow}`}>
-          <Container>
-            {showcaseData.map((element) => (
-              <motion.div
-                key={element.title}
-                initial={{
-                  opacity: 0.3,
-                  translateX: element.display === 0 ? -300 : 300,
-                }}
-                whileInView={{ opacity: 1, translateX: 0 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: true }}
-              >
-                <Showcase
-                  image={element.image}
-                  subject={element.subject}
-                  title={element.title}
-                  text={element.text}
-                  display={element.display}
-                />
-              </motion.div>
-            ))}
-          </Container>
-        </div>
       </section>
     </>
   );

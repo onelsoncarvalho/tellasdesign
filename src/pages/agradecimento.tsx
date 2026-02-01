@@ -20,13 +20,13 @@ const ThanksPage = () => {
 
   return (
     <>
-      <HeadComponent title="Nelson Carvalho | Agradecimentos" />
+      <HeadComponent title="Tellas Design Digital | Agradecimentos" />
 
       <Navbar />
 
-      <main className="pt-24 bg-mainDark min-h-screen">
+      <main className="pt-24 bg-slate-100 min-h-screen">
         <Container>
-          <div className="mt-20 flex flex-col gap-5">
+          <div className="mt-20 flex flex-col gap-5 items-center justify-center">
             <div className="max-w-[14em]">
               <Image
                 src={imageData.src}
@@ -35,12 +35,12 @@ const ThanksPage = () => {
               />
             </div>
 
-            <div>
-              <SubHeading className="text-3xl text-accentGreen">
+            <div className="items-center flex flex-col gap-4">
+              <SubHeading className="text-3xl text-[#4249EC]">
                 Obrigado
               </SubHeading>
-              <Text className="text-slate-50 tracking-wider font-light mb-5">
-                Agradeço pelo contato. Sua mensagem será lida em breve.
+              <Text className="text-slate-900 tracking-wider font-light mb-5">
+                Agradecemos pelo seu contato. Sua mensagem será lida e respondida em breve.
               </Text>
 
               <Link href="/">
