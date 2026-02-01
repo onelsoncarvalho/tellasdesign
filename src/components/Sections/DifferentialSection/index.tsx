@@ -40,6 +40,7 @@ const DifferentialSection = () => {
             <div className="flex justify-between flex-col items-center md:flex-row gap-8">
               <div className="flex flex-col justify-center align-center text-center max-w-[300px]">
                 <Image
+                  alt="computador"
                     src={computador}
                     className="max-w-[200px] mx-auto"
                   />
@@ -50,6 +51,7 @@ const DifferentialSection = () => {
             
               <div className="flex flex-col justify-center align-center text-center max-w-[300px]">
                 <Image
+                    alt="tecnologias atuais"
                     src={quadro}
                     className="max-w-[200px] mx-auto"
                   />
@@ -59,6 +61,7 @@ const DifferentialSection = () => {
             
              <div className="flex flex-col justify-center align-center text-center max-w-[300px]">
                 <Image
+                  alt="designs elegantes"
                     src={coroa}
                     className="max-w-[200px] mx-auto"
                   />
@@ -69,6 +72,7 @@ const DifferentialSection = () => {
               <div className="flex flex-col justify-center align-center text-center max-w-[300px]">
                 <Image
                     src={celular}
+                    alt="sites responsivos"
                     className="max-w-[200px] mx-auto"
                   />
                 <h2 className="font-bold text-xl">Sites responsivos</h2>
@@ -78,6 +82,7 @@ const DifferentialSection = () => {
               <div className="flex flex-col justify-center align-center text-center max-w-[300px]">
                 <Image
                     src={raio}
+                    alt="sites rápidos"
                     className="max-w-[200px] mx-auto"
                   />
                 <h2 className="font-bold text-xl">Sites rápidos</h2>
